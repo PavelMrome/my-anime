@@ -1,0 +1,125 @@
+.slider-container {
+    width: 100%; /* Установите ширину, которую хотите */
+    margin: 0 auto; /* Выравнивание по центру */
+    
+    display: grid;
+    grid-column: 4 / 12;
+    position: relative;
+    
+    grid-template-rows: min-content;
+    max-height: 100%;
+
+    border: solid 1px  white;
+    border-radius: 0.5%;
+
+    justify-self: unset;
+}
+
+.slide {
+    display: flex;
+    text-align: center;
+    padding: 1rem;
+    width: 50px;
+    height: 25%; /* или другая подходящая высота */
+    
+    cursor: pointer;
+    border-radius: 5%;
+    
+    
+}
+
+
+
+.slide img {
+    width: 50%;
+    border-radius: 8px;
+    
+}
+
+.slide h3 {
+    font-size: 1rem;
+    color: white;
+    margin-top: 8px;
+    font: weight 700px;;
+    
+        display: -webkit-box;             /* Отображает как блок с поддержкой нескольких строк */
+        -webkit-box-orient: vertical;     /* Задает вертикальную ориентацию */
+        overflow: hidden;                 /* Скрывает выходящий текст */
+        text-overflow: ellipsis;          /* Добавляет троеточие */
+        -webkit-line-clamp: 2;            /* Ограничивает количество строк (здесь 3) */
+                       /* Устанавливает максимальную ширину */
+                                /* Ограничивает ширину, чтобы текст переносился */
+    min-height: 40px;          /* Минимальная высота для выравнивания коротких заголовков */
+    overflow: hidden;          /* Скрывает выходящий текст, если он слишком длинный */
+    text-align: center;        /* Центрирует текст */
+         /* Позволяет многострочное обрезание */
+    -webkit-line-clamp: 2;     /* Ограничивает текст двумя строками */
+    -webkit-box-orient: vertical;
+    justify-self: center;
+    margin: 0;
+}
+
+
+.update-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+}
+
+.update-item img {
+    width: 100px; /* или другая подходящая ширина */
+    height: auto;
+    object-fit: cover;
+}
+
+.update-item p {
+    margin: 0;
+    font-size: 16px; /* настраиваемый размер шрифта */
+
+}
+
+.slider-img{
+    
+
+}
+
+.slick-slider {
+    display: grid;
+    grid-column: 1 / 13;
+   
+
+}
+
+.slick-slide img{
+ display: inline-flex;
+ 
+}
+
+.slick-next {
+right: 0;
+}
+.goooooal{
+    justify-self: center;
+    display: grid;
+    grid-column: 1 / 13;
+    padding-bottom: 0.3rem;
+    font-size: 24px;
+    font-weight: bolder;
+    color:slateblue;
+}
+
+.slick-list{
+    
+}
+
+.slick-track{
+    
+    box-shadow: #333;
+    
+}
+
+.slick-next:before {
+
+    content: none;
+}

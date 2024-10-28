@@ -1,0 +1,8 @@
+.App-main{
+
+        position: relative;
+        display: grid;
+        grid-column: 1/13;
+        width: 100%;
+        grid-template-rows: min-content;
+}
