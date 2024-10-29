@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from'react-router-dom';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import './Slider.css';
+import { Link } from 'react-router-dom';
 
 function UpdatesSlider() {
     const [updates, setUpdates] = useState([]);
@@ -11,8 +13,8 @@ function UpdatesSlider() {
         fetch('https://api.anilibria.tv/v3/title/updates?page=1&limit=40')
             .then(response => response.json())
             .then(data => {
-                console.log(data); // Проверка структуры данных в консоли
-                setUpdates(data.list || []); // Используем data.list, если он есть, иначе пустой массив
+                console.log(data); 
+                setUpdates(data.list || []); 
             })
             .catch(error => console.error('Ошибка:', error));
     }, []);
@@ -33,7 +35,7 @@ function UpdatesSlider() {
             {
                 breakpoint: 768,
                 settings: {
-                    slidesToShow: 1
+                    slidesToShow: 3
                 }
             }
         ]
@@ -45,8 +47,10 @@ function UpdatesSlider() {
             <Slider {...settings}>
                 {updates.map((update, index) => (
                     <div key={index} className="slide">
-                        <img className='slider-img' src={`https://www.anilibria.tv${update.posters.medium.url}`} alt={update.names.ru} />
+                        <Link to={`/anime/${update.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+                        <img className='slider-img' src={`https://www.anilibria.tv${update.posters.small.url}`} alt={update.names.ru} />
                         <h3>{update.names.ru}</h3>
+                        </Link>
                     </div>
                 ))}
             </Slider>

@@ -5,4 +5,5 @@
         grid-column: 1/13;
         width: 100%;
         grid-template-rows: min-content;
+        grid-template-columns: repeat(12, 1fr);
 }

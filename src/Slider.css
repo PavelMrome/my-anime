@@ -3,7 +3,7 @@
     margin: 0 auto; /* Выравнивание по центру */
     
     display: grid;
-    grid-column: 4 / 12;
+    grid-column: 1 / 13;
     position: relative;
     
     grid-template-rows: min-content;
@@ -28,13 +28,26 @@
     
 }
 
+/* @media ((max-width: 760px)) {
+    .slide {
+        width: 10%;
+    }
+} */
 
 
 .slide img {
     width: 50%;
     border-radius: 8px;
+    @media screen {  /* 360px */
+        
+    }
     
 }
+/* @media ((max-width: 760px)) {
+    .slide img {
+        width: 10%;
+    }
+} */
 
 .slide h3 {
     font-size: 1rem;
@@ -122,4 +135,10 @@ right: 0;
 .slick-next:before {
 
     content: none;
+}
+
+@media ((max-width: 760px)) {
+    .slik-slide {
+        width: 10%;
+    }
 }

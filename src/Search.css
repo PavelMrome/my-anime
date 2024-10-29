@@ -1,0 +1,52 @@
+.search {
+    position: relative;
+}
+
+.search-input {
+    padding: 10px;
+    width: 200px;
+}
+
+.suggestions-list {
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.suggestions-list li {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.suggestions-list li img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.suggestions-list li:hover {
+    background-color: #f0f0f0;
+}
+
+.suggestions {
+    position: relative;
+    background: white;
+    border: 1px solid #ccc;
+    z-index: 1000;
+    width: 100%;
+}
+
+.suggestion {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.suggestion:hover {
+    background-color: #f0f0f0;
+}
